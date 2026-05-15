@@ -1,8 +1,15 @@
-from PyQt6.QtWidgets import QApplication, QVBoxLayout, QWidget
-
+from PyQt6.QtWidgets import (QApplication,
+                             QGridLayout,
+                            QHBoxLayout,
+                             QWidget)
 
 app = QApplication([])
 window = QWidget()
-layout = QVBoxLayout()
+layout = QGridLayout()
+switch_layout =  QHBoxLayout()
+
 window.setLayout(layout)
-window.resize(500, 500)
+
+layout.addLayout(switch_layout, 2, 0)
+window.resize(500, 700)
+

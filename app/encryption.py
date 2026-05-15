@@ -5,7 +5,6 @@ import os
 load_dotenv()
 f = Fernet(os.getenv("FERNET_KEY").encode())
 
-
 def encryption(text):
     enText = f.encrypt(text.text().encode())
     return enText
